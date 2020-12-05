@@ -1,6 +1,6 @@
 import React from 'react';
 import {createStackNavigator, HeaderBackButton} from '@react-navigation/stack';
-import {SignIn, Auth, Onboarding, SplashScreen} from '../screens';
+import {SignIn, Auth, Onboarding, SplashScreen, SignUp} from '../screens';
 
 const Stack = createStackNavigator();
 
@@ -35,26 +35,13 @@ function AppStack() {
           headerShown: false,
         }}
       />
-      {/* <Stack.Screen
+      <Stack.Screen
         name="SignUp"
         component={SignUp}
-        options={({navigation}) => ({
-          headerShown: true,
-          headerTitleStyle: {
-            fontSize: 17,
-            alignSelf: 'center',
-            marginRight: 50,
-          },
-          title: 'SignUp',
-          headerLeft: () => (
-            <HeaderBackButton
-              onPress={() => {
-                navigation.pop();
-              }}
-            />
-          ),
-        })}
-      /> */}
+        options={{
+          headerShown: false,
+        }}
+      />
     </Stack.Navigator>
   );
 }
