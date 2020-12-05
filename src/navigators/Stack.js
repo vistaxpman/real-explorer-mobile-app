@@ -8,6 +8,13 @@ function AppStack() {
   return (
     <Stack.Navigator>
       <Stack.Screen
+        name="Onboarding"
+        component={Onboarding}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
         name="SignIn"
         component={SignIn}
         options={{
@@ -17,13 +24,6 @@ function AppStack() {
       <Stack.Screen
         name="Auth"
         component={Auth}
-        options={{
-          headerShown: false,
-        }}
-      />
-      <Stack.Screen
-        name="Onboarding"
-        component={Onboarding}
         options={{
           headerShown: false,
         }}
