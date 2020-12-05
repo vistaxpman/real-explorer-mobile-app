@@ -6,12 +6,19 @@
  * @flow strict-local
  */
 
-import React from 'react';
+import React, {useEffect} from 'react';
 import {NavigationContainer} from '@react-navigation/native';
+import RNBootSplash from 'react-native-bootsplash';
 import Stack from './navigators/Stack';
 import {navigationRef} from './navigators/RootNavigation';
 
 const App = () => {
+  useEffect(() => {
+    setTimeout(() => {
+      RNBootSplash.hide({fade: true});
+    }, 3000);
+  }, []);
+
   return (
     <NavigationContainer ref={navigationRef}>
       <Stack />
