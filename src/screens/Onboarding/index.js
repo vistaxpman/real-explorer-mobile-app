@@ -27,7 +27,7 @@ export function Onboarding({navigation}) {
           <Progress style={styles.progress} />
           <TouchableWithoutFeedback onPress={() => handleNavigation('Auth')}>
             <LinearGradient
-              colors={['#2B8DDC', '#733CF6']}
+              colors={['#2B8DDC', '#3B7AE2']}
               style={styles.linearGradient}>
               <MaterialIcons
                 name="keyboard-arrow-right"

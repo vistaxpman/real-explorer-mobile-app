@@ -18,6 +18,8 @@ export function SignIn({navigation}) {
     setData({...data, isPasswordHidden});
   };
 
+  const handleSignIn = () => {}
+
   return (
     <View style={styles.signInContainer}>
       <TouchableOpacity onPress={() => navigation?.goBack()}>
@@ -53,9 +55,9 @@ export function SignIn({navigation}) {
             </TouchableOpacity>
           )}
         </View>
-        <TouchableWithoutFeedback onPress={() => handleNavigation('Auth')}>
+        <TouchableWithoutFeedback onPress={() => handleSignIn()}>
           <LinearGradient
-            colors={['#2B8DDC', '#733CF6']}
+            colors={['#2B8DDC', '#3B7AE2']}
             style={styles.btnContinue}>
             <Text style={styles.continueText}>Continue</Text>
           </LinearGradient>

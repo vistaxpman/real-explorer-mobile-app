@@ -22,7 +22,7 @@ export function Auth({navigation}) {
         <View style={styles.bottomWrapper}>
           <TouchableOpacity onPress={() => handleNavigation('SignUp')}>
             <LinearGradient
-              colors={['#2B8DDC', '#733CF6']}
+              colors={['#2B8DDC', '#3B7AE2']}
               style={styles.btnGradient}>
               <Text style={styles.whiteText}>Sign Up</Text>
             </LinearGradient>
