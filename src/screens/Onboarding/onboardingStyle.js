@@ -3,7 +3,7 @@ import {StyleSheet} from 'react-native';
 const styles = StyleSheet.create({
   onboardingContainer: {
     flex: 1,
-    backgroundColor: '#E5E5E5',
+    backgroundColor: '#fff'
   },
   onboardingContent: {
     display: 'flex',
