@@ -1,10 +1,72 @@
 import React from 'react';
-import {createStackNavigator, HeaderBackButton} from '@react-navigation/stack';
-import {SignIn, Auth, Onboarding, SplashScreen, SignUp} from '../screens';
+import {createStackNavigator} from '@react-navigation/stack';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import AntDesign from 'react-native-vector-icons/AntDesign';
+import Ionicons from 'react-native-vector-icons/Ionicons';
+import {
+  SignIn,
+  Auth,
+  Onboarding,
+  SplashScreen,
+  SignUp,
+  Favorites,
+  Home,
+  Message,
+  Profile,
+} from '../screens';
 
 const Stack = createStackNavigator();
+const Tab = createBottomTabNavigator();
 
-function AppStack() {
+const TabStack = () => {
+  return (
+    <Tab.Navigator>
+      <Tab.Screen
+        name="Home"
+        component={Home}
+        options={{
+          title: 'Home',
+          tabBarIcon: ({tintColor}) => (
+            <AntDesign name="search1" color="#ccc" size={25} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Favorites"
+        component={Favorites}
+        options={{
+          title: 'Favorites',
+          tabBarIcon: ({tintColor}) => (
+            <MaterialIcons name="favorite-border" color="#ccc" size={25} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Message"
+        component={Message}
+        options={{
+          title: 'Message',
+          tabBarIcon: ({tintColor}) => (
+            <AntDesign name="message1" color="#ccc" size={25} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Profile"
+        component={Profile}
+        options={{
+          title: 'Profile',
+          tabBarIcon: ({tintColor}) => (
+            <Ionicons name="md-person-outline" color="#ccc" size={25} />
+          ),
+        }}
+      />
+    </Tab.Navigator>
+  );
+};
+
+const AuthStack = () => {
   return (
     <Stack.Navigator>
       <Stack.Screen
@@ -44,6 +106,23 @@ function AppStack() {
       />
     </Stack.Navigator>
   );
-}
+};
+
+const AppStack = () => {
+  return (
+    <Stack.Navigator initialRouteName="Home">
+      <Stack.Screen
+        name="Auth"
+        component={AuthStack}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="Home"
+        component={TabStack}
+        options={{headerShown: false}}
+      />
+    </Stack.Navigator>
+  );
+};
 
 export default AppStack;

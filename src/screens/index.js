@@ -3,3 +3,7 @@ export * from './Onboarding';
 export * from './SignIn';
 export * from './SplashScreen';
 export * from './SignUp';
+export * from './Favorites';
+export * from './Home';
+export * from './Message';
+export * from './Profile';
