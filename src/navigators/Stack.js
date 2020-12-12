@@ -28,7 +28,7 @@ const TabStack = () => {
         options={{
           title: 'Home',
           tabBarIcon: ({tintColor}) => (
-            <AntDesign name="search1" color="#ccc" size={25} />
+            <AntDesign name="home" color="#ccc" size={25} />
           ),
         }}
       />
