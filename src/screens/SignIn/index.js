@@ -10,6 +10,10 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Feather from 'react-native-vector-icons/Feather';
 import LinearGradient from 'react-native-linear-gradient';
 import styles from './signInStyle';
+import {
+  handleScreenNavigation,
+  handleScreenBack,
+} from '../../navigators/NavigatorHandler';
 
 export function SignIn({navigation}) {
   const [data, setData] = useState({isPasswordHidden: true});
@@ -18,11 +22,13 @@ export function SignIn({navigation}) {
     setData({...data, isPasswordHidden});
   };
 
-  const handleSignIn = () => {}
+  const handleSignIn = () => {
+    handleScreenNavigation(navigation, 'Dashboard');
+  };
 
   return (
     <View style={styles.signInContainer}>
-      <TouchableOpacity onPress={() => navigation?.goBack()}>
+      <TouchableOpacity onPress={() => handleScreenBack(navigation)}>
         <View style={styles.backArrowWrapper}>
           <FontAwesome name="long-arrow-left" size={20} color="gray" />
         </View>

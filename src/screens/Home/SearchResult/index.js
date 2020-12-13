@@ -50,7 +50,8 @@ export default function SearchResult({toggleActivePage, searchText}) {
           ]}
         />
         {data.searchValue ? (
-          <TouchableWithoutFeedback onPress={() => handleSetData('searchValue', '')}>
+          <TouchableWithoutFeedback
+            onPress={() => handleSetData('searchValue', '')}>
             <EvilIcons
               name="close"
               size={25}
@@ -101,15 +102,15 @@ export default function SearchResult({toggleActivePage, searchText}) {
               </View>
               <View style={styles.propertyInfo}>
                 <View style={styles.singlePropertyInfo}>
-                  <Bed />
+                  <Bed width={18} height={14} />
                   <Text style={styles.singlePropertyText}>2</Text>
                 </View>
                 <View style={styles.singlePropertyInfo}>
-                  <Room />
+                  <Room width={18} height={14} />
                   <Text style={styles.singlePropertyText}>1</Text>
                 </View>
                 <View style={styles.singlePropertyInfo}>
-                  <Wall />
+                  <Wall width={18} height={14} />
                   <Text style={styles.singlePropertyText}>1,100 Sqft</Text>
                 </View>
               </View>

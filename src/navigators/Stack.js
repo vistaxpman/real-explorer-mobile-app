@@ -110,14 +110,14 @@ const AuthStack = () => {
 
 const AppStack = () => {
   return (
-    <Stack.Navigator initialRouteName="Home">
+    <Stack.Navigator initialRouteName="Auth">
       <Stack.Screen
         name="Auth"
         component={AuthStack}
         options={{headerShown: false}}
       />
       <Stack.Screen
-        name="Home"
+        name="Dashboard"
         component={TabStack}
         options={{headerShown: false}}
       />

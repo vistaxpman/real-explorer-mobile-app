@@ -105,8 +105,8 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
   },
   propertyPrice: {
-    paddingHorizontal: 15,
-    paddingVertical: 5,
+    paddingHorizontal: 10,
+    paddingVertical: 3,
     color: '#2058DB',
     borderColor: '#2058DB',
     borderWidth: 1,

@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View} from 'react-native';
+import {View, KeyboardAvoidingView} from 'react-native';
 import styles from './homeStyle';
 import LandingPage from './LandingPage';
 import SearchResult from './SearchResult';
@@ -10,12 +10,6 @@ export function Home({navigation}) {
     searchText: '',
   });
 
-  const handleNavigation = (route, param) => {
-    navigation?.navigate(route, {
-      param,
-    });
-  };
-
   const handleActivePage = (params) => {
     const obj = {};
     for (const property in params) {
@@ -25,7 +19,7 @@ export function Home({navigation}) {
   };
 
   return (
-    <View style={styles.homeContainer}>
+    <KeyboardAvoidingView style={styles.homeContainer}>
       {data?.activePage === 'LandingPage' ? (
         <LandingPage toggleActivePage={handleActivePage} />
       ) : data?.activePage === 'SearchResult' ? (
@@ -34,6 +28,6 @@ export function Home({navigation}) {
           searchText={data.searchText}
         />
       ) : null}
-    </View>
+    </KeyboardAvoidingView>
   );
 }

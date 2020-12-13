@@ -54,16 +54,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: 15,
     paddingVertical: 7,
   },
-  propertyImgWrapper: {
-    position: 'relative',
-    height: 200,
-    marginBottom: 10,
-  },
-  imageBg: {
-    width: '100%',
-    height: '100%',
-    resizeMode: 'cover',
-  },
   resultContent: {paddingBottom: 240},
   scrollViewContent: {height: '100%'},
   propertyContainer: {
@@ -75,6 +65,16 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     paddingBottom: 7,
     marginBottom: 15,
+  },
+  propertyImgWrapper: {
+    position: 'relative',
+    height: 200,
+    marginBottom: 10,
+  },
+  imageBg: {
+    width: '100%',
+    height: '100%',
+    resizeMode: 'cover',
   },
   priceText: {
     backgroundColor: '#00AB6B',
@@ -88,6 +88,7 @@ const styles = StyleSheet.create({
     right: 10,
   },
   propertyDetails: {
+    width: '100%',
     paddingHorizontal: 10,
   },
   propertyName: {

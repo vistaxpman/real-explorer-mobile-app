@@ -4,8 +4,8 @@ import Svg, {Path} from 'react-native-svg';
 export function Room(props) {
   return (
     <Svg
-      width={18}
-      height={14}
+      width={props?.width}
+      height={props?.height}
       viewBox="0 0 18 14"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
