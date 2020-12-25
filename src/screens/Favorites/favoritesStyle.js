@@ -9,8 +9,8 @@ const styles = StyleSheet.create({
   favouritesHeader: {
     display: 'flex',
     flexDirection: 'row',
-    borderWidth: 1,
-    borderColor: '#F1F1F1',
+    borderBottomWidth: 1,
+    borderBottomColor: '#F1F1F1',
     paddingHorizontal: 16,
     paddingTop: 16,
     paddingBottom: 20,
@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
   propertyImgWrapper: {
     position: 'relative',
     width: '40%',
-    height: 135,
+    height: 120,
   },
   imageBg: {
     width: '100%',

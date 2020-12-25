@@ -5,5 +5,5 @@ export * from './SplashScreen';
 export * from './SignUp';
 export * from './Favorites';
 export * from './Home';
-export * from './Message';
+export * from './Messages';
 export * from './Profile';

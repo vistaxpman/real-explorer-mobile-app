@@ -12,7 +12,7 @@ import {
   SignUp,
   Favorites,
   Home,
-  Message,
+  Messages,
   Profile,
 } from '../screens';
 
@@ -43,10 +43,10 @@ const TabStack = () => {
         }}
       />
       <Tab.Screen
-        name="Message"
-        component={Message}
+        name="Messages"
+        component={Messages}
         options={{
-          title: 'Message',
+          title: 'Messages',
           tabBarIcon: ({tintColor}) => (
             <AntDesign name="message1" color="#ccc" size={25} />
           ),
