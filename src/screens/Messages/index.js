@@ -5,10 +5,12 @@ import {
   KeyboardAvoidingView,
   ScrollView,
   Image,
+  TouchableWithoutFeedback,
 } from 'react-native';
 import Feather from 'react-native-vector-icons/Feather';
 import shortid from 'shortid';
 import styles from './messagesStyle';
+import {handleScreenNavigation} from '../../navigators/NavigatorHandler';
 
 export function Messages({navigation}) {
   const [data, setData] = useState({
@@ -51,23 +53,29 @@ export function Messages({navigation}) {
         showsVerticalScrollIndicator={false}>
         {data.propertyManagers?.length ? (
           data.propertyManagers.map((propertyManager) => (
-            <View key={shortid.generate()} style={styles.singlePropertyManager}>
-              <Image
-                source={{uri: propertyManager.profilePic}}
-                style={styles.propertyManagerPic}
-              />
-              <View style={styles.propertyManagerInfo}>
-                <View style={styles.propertyManagerColumnWrapper}>
-                  <Text style={styles.propertyManagerName}>
-                    {propertyManager.name}
-                  </Text>
-                  <Text style={styles.propertyManagerLastMessage}>
-                    {propertyManager.lastMessage}
+            <TouchableWithoutFeedback
+              key={shortid.generate()}
+              onPress={() => handleScreenNavigation(navigation, 'MessageDetails')}>
+              <View style={styles.singlePropertyManager}>
+                <Image
+                  source={{uri: propertyManager.profilePic}}
+                  style={styles.propertyManagerPic}
+                />
+                <View style={styles.propertyManagerInfo}>
+                  <View style={styles.propertyManagerColumnWrapper}>
+                    <Text style={styles.propertyManagerName}>
+                      {propertyManager.name}
+                    </Text>
+                    <Text style={styles.propertyManagerLastMessage}>
+                      {propertyManager.lastMessage}
+                    </Text>
+                  </View>
+                  <Text style={styles.propertyManagerLastMessageTime}>
+                    {propertyManager.lastMessageTime}
                   </Text>
                 </View>
-                <Text style={styles.propertyManagerLastMessageTime}>{propertyManager.lastMessageTime}</Text>
               </View>
-            </View>
+            </TouchableWithoutFeedback>
           ))
         ) : (
           <View style={styles.noneFoundContainer}>

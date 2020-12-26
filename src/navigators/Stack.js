@@ -14,6 +14,8 @@ import {
   Home,
   Messages,
   Profile,
+  MessageDetails,
+  PropertyManager
 } from '../screens';
 
 const Stack = createStackNavigator();
@@ -68,7 +70,7 @@ const TabStack = () => {
 
 const AuthStack = () => {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator initialRouteName="Onboarding">
       <Stack.Screen
         name="Onboarding"
         component={Onboarding}
@@ -100,6 +102,20 @@ const AuthStack = () => {
       <Stack.Screen
         name="SignUp"
         component={SignUp}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        name="MessageDetails"
+        component={MessageDetails}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        name="PropertyManager"
+        component={PropertyManager}
         options={{
           headerShown: false,
         }}
