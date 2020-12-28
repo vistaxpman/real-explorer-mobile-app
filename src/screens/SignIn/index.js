@@ -11,7 +11,7 @@ import Feather from 'react-native-vector-icons/Feather';
 import LinearGradient from 'react-native-linear-gradient';
 import styles from './signInStyle';
 import {
-  handleScreenNavigation,
+  handleScreenReplace,
   handleScreenBack,
 } from '../../navigators/NavigatorHandler';
 
@@ -23,7 +23,7 @@ export function SignIn({navigation}) {
   };
 
   const handleSignIn = () => {
-    handleScreenNavigation(navigation, 'Dashboard');
+    handleScreenReplace(navigation, 'Dashboard');
   };
 
   return (
