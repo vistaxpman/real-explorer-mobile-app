@@ -13,6 +13,7 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 import styles from './searchResultStyle';
 import {Filter, Wall, Room, Bed} from '../../../assets/icons';
 import PropertyImage from '../../../assets/images/property-image-1.png';
+import {combineData} from '../../../utils/helpers';
 
 export default function SearchResult({toggleActivePage, searchText}) {
   const [data, setData] = useState({
@@ -26,9 +27,7 @@ export default function SearchResult({toggleActivePage, searchText}) {
   };
 
   const handleSetData = (key, value) => {
-    const obj = data;
-    obj[key] = value;
-    // setData({...data, ...obj});
+    setData(combineData(data, {key, value}));
   };
 
   return (
@@ -43,11 +42,15 @@ export default function SearchResult({toggleActivePage, searchText}) {
           />
         </TouchableOpacity>
         <TextInput
-          value={searchText}
+          value={data.searchValue}
           style={[
             styles.searchInput,
-            searchText ? styles.paddingRight5 : styles.paddingRight30,
+            data.searchValue ? styles.paddingRight5 : styles.paddingRight30,
           ]}
+          placeholder="Search"
+          onChangeText={(inputValue) =>
+            handleSetData('searchValue', inputValue)
+          }
         />
         {data.searchValue ? (
           <TouchableWithoutFeedback

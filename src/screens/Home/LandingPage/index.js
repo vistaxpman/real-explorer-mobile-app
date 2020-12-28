@@ -17,6 +17,7 @@ import {
   Property,
 } from '../../../assets/showcase';
 import PropertyImage from '../../../assets/images/property-image.png';
+import {combineData} from '../../../utils/helpers';
 
 export default function LandingPage({toggleActivePage}) {
   const [data, setData] = useState({
@@ -27,9 +28,7 @@ export default function LandingPage({toggleActivePage}) {
   const inputRef = useRef(null);
 
   const handleSetData = (key, value) => {
-    const obj = data;
-    obj[key] = value;
-    setData({...data, ...obj});
+    setData(combineData(data, {key, value}));
   };
 
   const handleSearch = () => {

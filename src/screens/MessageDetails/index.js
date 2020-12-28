@@ -15,6 +15,8 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import shortid from 'shortid';
 import styles from './messageDetailsStyle';
 import {handleScreenBack} from '../../navigators/NavigatorHandler';
+import {combineData} from '../../utils/helpers';
+import {CustomArrowUp} from '../../assets/icons';
 
 export function MessageDetails({navigation}) {
   const [data, setData] = useState({});
@@ -42,12 +44,23 @@ export function MessageDetails({navigation}) {
         <ScrollView
           style={styles.scrollViewContent}
           showsVerticalScrollIndicator={false}>
-          <View></View>
+          <View style={styles.messageContainer}>
+            <Text style={styles.viewListingBtn}>View Listing</Text>
+          </View>
         </ScrollView>
         <View style={styles.bottomMessageContainer}>
-          <AntDesign name="camerao" size={20} />
-          <TextInput placeholder="Type Message" />
-          <Text>Test</Text>
+          <View style={styles.messageFieldWrapper}>
+            <AntDesign name="camerao" size={20} color="gray" />
+            <TextInput
+              placeholder="Type Message"
+              style={styles.messageTextInput}
+            />
+          </View>
+          <TouchableOpacity>
+            <View style={styles.sendMessageBtn}>
+              <CustomArrowUp width={25} height={25} />
+            </View>
+          </TouchableOpacity>
         </View>
       </View>
     </KeyboardAvoidingView>
