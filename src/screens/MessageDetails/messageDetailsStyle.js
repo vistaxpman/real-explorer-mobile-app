@@ -34,10 +34,6 @@ const styles = StyleSheet.create({
   scrollViewContent: {
     height: '100%',
   },
-  viewListingBtn: {
-    fontWeight: 'bold',
-    marginLeft: 'auto',
-  },
   bottomMessageContainer: {
     position: 'absolute',
     bottom: 0,
@@ -50,6 +46,7 @@ const styles = StyleSheet.create({
     paddingTop: 5,
     paddingBottom: 10,
     width: '100%',
+    backgroundColor: '#fff'
   },
   messageFieldWrapper: {
     display: 'flex',
@@ -77,6 +74,7 @@ const styles = StyleSheet.create({
   },
   messageContainer: {
     padding: 16,
+    marginBottom: 50
   },
   viewListingBtn: {
     paddingVertical: 7,
@@ -85,6 +83,83 @@ const styles = StyleSheet.create({
     borderColor: '#C4C4C4',
     alignSelf: 'flex-end',
     borderRadius: 5,
+    marginBottom: 15,
+  },
+  propertyContainer: {
+    borderRadius: 7,
+    backgroundColor: '#F9F9F9',
+    width: 280,
+    alignSelf: 'flex-end',
+    paddingBottom: 15,
+    marginBottom: 20,
+  },
+  propertyImage: {
+    height: 170,
+    width: 280,
+    borderTopLeftRadius: 5,
+    borderTopRightRadius: 5,
+  },
+  propertyTitle: {
+    fontWeight: 'bold',
+    marginLeft: 10,
+    marginTop: 5,
+    marginBottom: 2,
+  },
+  propertyLocation: {
+    display: 'flex',
+    flexDirection: 'row',
+    marginLeft: 5,
+    alignItems: 'center',
+  },
+  propertyLocationText: {
+    color: 'gray',
+    fontSize: 12,
+  },
+  senderMessageContainer: {
+    alignSelf: 'flex-end',
+    marginBottom: 20,
+  },
+  senderMessageText: {
+    maxWidth: '75%',
+    color: '#fff',
+    backgroundColor: '#2058DB',
+    borderTopLeftRadius: 15,
+    borderTopRightRadius: 15,
+    borderBottomLeftRadius: 15,
+    padding: 10,
+    marginBottom: 5,
+  },
+  senderMessageTimeText: {
+    opacity: 0.5,
+    marginLeft: 'auto',
+    fontSize: 12,
+  },
+  receiverMessageWrapper: {
+    marginBottom: 20,
+    display: 'flex',
+    flexDirection: 'row',
+  },
+  receiverProfilePic: {
+    height: 40,
+    width: 40,
+    borderRadius: 50,
+    marginRight: 10,
+  },
+  receiverMessageContainer: {
+    marginBottom: 20,
+  },
+  receiverMessageText: {
+    maxWidth: '75%',
+    color: '#000',
+    backgroundColor: '#F5F5F5',
+    borderTopLeftRadius: 15,
+    borderTopRightRadius: 15,
+    borderBottomRightRadius: 15,
+    padding: 10,
+    marginBottom: 5,
+  },
+  receiverMessageTimeText: {
+    fontSize: 12,
   },
 });
 

@@ -12,6 +12,7 @@ import {
 import Feather from 'react-native-vector-icons/Feather';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import EvilIcons from 'react-native-vector-icons/EvilIcons';
 import shortid from 'shortid';
 import styles from './messageDetailsStyle';
 import {handleScreenBack} from '../../navigators/NavigatorHandler';
@@ -46,6 +47,82 @@ export function MessageDetails({navigation}) {
           showsVerticalScrollIndicator={false}>
           <View style={styles.messageContainer}>
             <Text style={styles.viewListingBtn}>View Listing</Text>
+            <View style={styles.propertyContainer}>
+              <Image
+                source={{
+                  uri:
+                    'https://images.unsplash.com/photo-1560185127-6ed189bf02f4?ixid=MXwxMjA3fDB8MHxzZWFyY2h8N3x8cmVhbCUyMGVzdGF0ZXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80',
+                }}
+                style={styles.propertyImage}
+              />
+              <Text style={styles.propertyTitle}>
+                Darga Mawijaya Tower Surabaya
+              </Text>
+              <View style={styles.propertyLocation}>
+                <EvilIcons name="location" size={18} color="gray" />
+                <Text style={styles.propertyLocationText}>
+                  Dukuh Pakis, Dukuh Pakis, Surabaya
+                </Text>
+              </View>
+            </View>
+            <View style={styles.senderMessageContainer}>
+              <Text style={styles.senderMessageText}>
+                Hello we are interested in this how about the price?
+              </Text>
+              <Text style={styles.senderMessageTimeText}>8:46 AM</Text>
+            </View>
+            <View style={styles.receiverMessageWrapper}>
+              <Image
+                source={{
+                  uri: 'https://randomuser.me/api/portraits/women/0.jpg',
+                }}
+                style={styles.receiverProfilePic}
+              />
+              <View style={styles.receiverMessageContainer}>
+                <Text style={styles.receiverMessageText}>
+                  Hi,There, the price is negotiable
+                </Text>
+                <Text style={styles.receiverMessageTimeText}>8:46 AM</Text>
+              </View>
+            </View>
+            <View style={styles.propertyContainer}>
+              <Image
+                source={{
+                  uri:
+                    'https://images.unsplash.com/photo-1560185127-6ed189bf02f4?ixid=MXwxMjA3fDB8MHxzZWFyY2h8N3x8cmVhbCUyMGVzdGF0ZXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80',
+                }}
+                style={styles.propertyImage}
+              />
+              <Text style={styles.propertyTitle}>
+                Darga Mawijaya Tower Surabaya
+              </Text>
+              <View style={styles.propertyLocation}>
+                <EvilIcons name="location" size={18} color="gray" />
+                <Text style={styles.propertyLocationText}>
+                  Dukuh Pakis, Dukuh Pakis, Surabaya
+                </Text>
+              </View>
+            </View>
+            <View style={styles.senderMessageContainer}>
+              <Text style={styles.senderMessageText}>
+                Hello we are interested in this how about the price?
+              </Text>
+              <Text style={styles.senderMessageTimeText}>8:46 AM</Text>
+            </View>
+            <View style={styles.receiverMessageWrapper}>
+              <Image
+                source={{
+                  uri: 'https://randomuser.me/api/portraits/women/0.jpg',
+                }}
+                style={styles.receiverProfilePic}
+              />
+              <View style={styles.receiverMessageContainer}>
+                <Text style={styles.receiverMessageText}>
+                  Hi,There, the price is negotiable
+                </Text>
+                <Text style={styles.receiverMessageTimeText}>8:46 AM</Text>
+              </View>
+            </View>
           </View>
         </ScrollView>
         <View style={styles.bottomMessageContainer}>
