@@ -5,14 +5,9 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import styles from './onboardingStyle';
 import {OnboardingImg} from '../../assets/illustrations';
 import {Progress} from '../../assets/icons';
+import {handleScreenNavigation} from '../../navigators/NavigatorHandler';
 
 export function Onboarding({navigation}) {
-  const handleNavigation = (route, param) => {
-    navigation.navigate(route, {
-      param,
-    });
-  };
-
   return (
     <View style={styles.onboardingContainer}>
       <View style={styles.onboardingContent}>
@@ -25,7 +20,8 @@ export function Onboarding({navigation}) {
         <Text style={styles.textTwo}>Thousands of homes waiting for you</Text>
         <View style={styles.bottomWrapper}>
           <Progress style={styles.progress} />
-          <TouchableWithoutFeedback onPress={() => handleNavigation('Auth')}>
+          <TouchableWithoutFeedback
+            onPress={() => handleScreenNavigation(navigation, 'Auth')}>
             <LinearGradient
               colors={['#2B8DDC', '#3B7AE2']}
               style={styles.linearGradient}>
