@@ -13,7 +13,9 @@ import styles from './signInStyle';
 import {
   handleScreenReplace,
   handleScreenBack,
+  handleNestedReplace,
 } from '../../navigators/NavigatorHandler';
+import {getScreenParent} from '../../utils/navigationHelper';
 
 export function SignIn({navigation}) {
   const [data, setData] = useState({isPasswordHidden: true});
@@ -23,7 +25,7 @@ export function SignIn({navigation}) {
   };
 
   const handleSignIn = () => {
-    handleScreenReplace(navigation, 'Dashboard');
+    handleNestedReplace(navigation, getScreenParent('Home'), 'Home');
   };
 
   return (

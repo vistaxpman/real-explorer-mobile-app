@@ -6,7 +6,7 @@ import EvilIcons from 'react-native-vector-icons/EvilIcons';
 import {Wall, Room, Bed} from '../../assets/icons';
 import PropertyImage from '../../assets/images/property-image-1.png';
 
-export function Favorites() {
+export function Favorites({navigation}) {
   const [data, setData] = useState({
     favorites: ['One', 'Two', 'Three', 'Four', 'One', 'Two', 'Three', 'Four'],
   });

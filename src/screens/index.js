@@ -9,3 +9,4 @@ export * from './Messages';
 export * from './Profile';
 export * from './MessageDetails';
 export * from './PropertyManager';
+export * from './PropertyDetails';
