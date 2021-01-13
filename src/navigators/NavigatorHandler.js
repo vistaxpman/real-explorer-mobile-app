@@ -1,17 +1,21 @@
-export const handleScreenNavigation = (navigation, route, param) => {
+export const handleScreenNavigation = (navigation, route, params) => {
   navigation?.navigate(route, {
-    param,
+    params,
   });
 };
 
-export const handleNestedNavigation = (navigation, route, param, parent) => {
-  navigation?.navigate(parent, {screen: route, param});
-};
-
-export const handleScreenReplace = (navigation, route, param) => {
+export const handleScreenReplace = (navigation, route, params) => {
   navigation?.replace(route, {
-    param,
+    params,
   });
+};
+
+export const handleNestedNavigation = (navigation, parent, route, params) => {
+  navigation?.navigate(parent, {screen: route, params});
+};
+
+export const handleNestedReplace = (navigation, parent, route, params) => {
+  navigation?.replace(parent, {screen: route, params});
 };
 
 export const handleScreenBack = (navigation) => {

@@ -11,6 +11,7 @@ import Feather from 'react-native-vector-icons/Feather';
 import shortid from 'shortid';
 import styles from './messagesStyle';
 import {handleNestedNavigation} from '../../navigators/NavigatorHandler';
+import {getScreenParent} from '../../utils/navigationHelper';
 
 export function Messages({navigation}) {
   const [data, setData] = useState({
@@ -36,6 +37,10 @@ export function Messages({navigation}) {
     ],
   });
 
+  const handleNavigation = (route, param) => {
+    handleNestedNavigation(navigation, getScreenParent(route), route, param);
+  };
+
   return (
     <KeyboardAvoidingView style={styles.messageContainer}>
       <View style={styles.messagesHeader}>
@@ -55,7 +60,7 @@ export function Messages({navigation}) {
           data.propertyManagers.map((propertyManager) => (
             <TouchableWithoutFeedback
               key={shortid.generate()}
-              onPress={() => handleNestedNavigation(navigation, 'MessageDetails', null, 'Auth')}>
+              onPress={() => handleNavigation('MessageDetails')}>
               <View style={styles.singlePropertyManager}>
                 <Image
                   source={{uri: propertyManager.profilePic}}
