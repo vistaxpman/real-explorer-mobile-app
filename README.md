@@ -1,4 +1,4 @@
-# Real Explorer Mobile
+# Real Explorer Mobile App
 
 A real-estate app built with React-Native
 
